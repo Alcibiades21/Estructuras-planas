@@ -1,0 +1,21 @@
+Propiedades
+1. Todo nodo es rojo o negro
+2. La raiz es negra
+3. Todas las hojas null son negras
+4. Todo nodo rojo debe tener dos nodos hijos negros
+5. Todo camino de la raiz hasta las hojas debe tener el mínimo numeros de numeros
+nodos negros
+6. El camino mas largo es dos veces el camino más corto
+7. Todo nodo que se inserta es rojo
+
+Inserción
+Caso1: Si papa y tio son rojos. (cambia de color ambos y el abuelo).
+
+Caso2: padre rojo y tio negro, ademas hijo es derecho y el padre es 
+       izquierdo de su abuelo. (se rota por el padre hacia la izquierda).
+       Despues de la rotación quedan dos nodos seguidos, esto incumple las 
+       propiedades 4 y 5. Por lo tanto se procede a aplicar el caso3.
+
+caso3: Tio es negro, hijo rojo es izquierdo o derecho de su padre rojo: (si el padre 
+      es derecho se rota derecho o de lo contrario izquierda por el abuelo). 
+       Despues se colorea al padre de negro y al abuelo de rojo
